@@ -426,7 +426,8 @@ var resizePizzas = function(size) {
     var oldwidth = elem.offsetWidth;//read layout
     var windowwidth = document.querySelector("#randomPizzas").offsetWidth;//read layout
     var oldsize = oldwidth / windowwidth;
-    console.log("how often is determineDx running");
+    console.log(oldwidth);
+    console.log(windowwidth);
     // Changes the slider value to a percent width
     function sizeSwitcher (size) {
       switch(size) {
@@ -453,7 +454,8 @@ var resizePizzas = function(size) {
       var dx = determineDx(document.querySelectorAll(".randomPizzaContainer")[i], size);//read layout
       var newwidth = (document.querySelectorAll(".randomPizzaContainer")[i].offsetWidth + dx) + 'px';//read layout
       document.querySelectorAll(".randomPizzaContainer")[i].style.width = newwidth;//write css
-      console.log('how often is this running');
+      console.log(dx);
+      console.log(newwidth);
     }
   }
 
